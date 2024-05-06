@@ -1,0 +1,81 @@
+:root {
+    --primary-text-color: #F8F8F8;
+    --secondary-text-color: #DCFFAF;
+
+    --primary-color:#001C1E;
+    --secondary-color:#002528;
+
+}
+
+*{
+    background: var(--primary-color);
+    color:var(--primary-text-color);
+    font-family: "Outfit", sans-serif;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navigation-icons {
+    display: flex;
+    align-items: center;
+    gap:20px;
+    
+    .header-icon {
+        margin-inline:10px;
+    }
+}
+.content-wrapper 
+.content-wrapper {
+    .description-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .name-container{
+        color: var(--secondary-text-color);
+        font-weight:16px;
+    }
+
+    .job-title {
+        font-size: 45px;
+        font-weight: 600;
+    
+    }
+}
+
+.scroller {
+    display: flex;
+    gap: 20px;
+    overflow: scroll;
+}
+
+.card-wrapper * {
+    background-color: var(--secondary-color);
+}
+
+.card-wrapper {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    padding:15px;
+    flex: 0 0 50%;
+}
+
+@media screen and (min-width:750px) {
+
+    .flex-box {
+        padding:40px 60px;
+    }
+
+    .hero-wrapper {
+        display: flex;
+    
+    
+        .left-container{
+            flex: 0 0 30%;
+        }
+    }
+}
