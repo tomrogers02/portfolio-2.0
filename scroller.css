@@ -1,0 +1,20 @@
+.scroller {
+    scrollbar-color: var(--secondary-text-color)
+}
+
+.scroller::-webkit-scrollbar {
+    height:8px;
+    width:60%;
+    
+}
+  
+
+.scroller::-webkit-scrollbar-track {
+    background-color: #01272a;
+    
+}
+
+.scroller::-webkit-scrollbar-thumb {
+    background-color: var(--secondary-text-color);
+    border-radius: 20px;
+}

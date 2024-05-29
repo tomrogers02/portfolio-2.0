@@ -11,9 +11,15 @@
   font-family: "Outfit", sans-serif;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y:hidden;
+}
+
 .flex-box {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end
 }
 
 .navigation-icons {
@@ -24,7 +30,9 @@
 .navigation-icons .header-icon {
   margin-inline: 10px;
 }
-
+.content-wrapper{
+  margin-block:60px;
+}
 .content-wrapper .content-wrapper .description-wrapper {
   display: flex;
   flex-direction: column;
@@ -42,7 +50,8 @@
 .scroller {
   display: flex;
   gap: 20px;
-  overflow: scroll;
+  overflow-x: scroll;
+  padding-block: 10px 80px;
 }
 
 .card-wrapper * {
@@ -52,18 +61,107 @@
 .card-wrapper {
   background-color: var(--secondary-color);
   border-radius: 15px;
-  padding: 15px;
+  padding: 45px;
   flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-job-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-container, .card-date {
+  color: var(--secondary-text-color);
+  font-size: 18px;
+  margin-block: 10px;
+}
+
+.job-title {
+  font-weight: bold;
+  font-size: 46px;
+  margin-block: 10px;
+
+}
+
+.card-job-title {
+  font-weight: 500;
+  font-size:24px;
+}
+
+.card-company {
+  color:#A8A8A8;
 }
 
 @media screen and (min-width: 750px) {
   .flex-box {
-    padding: 40px 60px;
+    padding: 40px 98px;
   }
   .hero-wrapper {
     display: flex;
+    height:100vh;
   }
   .hero-wrapper .left-container {
-    flex: 0 0 30%;
+    flex: 0 0 20%;
   }
-}/*# sourceMappingURL=main.css.map */
+
+  .personal-description {
+    width:60%;
+    margin-block: 20px 60px;
+
+  }
+
+
+  .left-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  ul {
+    display: grid;
+    align-items: center;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0 100px;
+    padding: 160px 0px;
+    border-left: 1px solid white
+  }
+
+  ul > li {
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  ul > li::after {
+    --size: 10px;
+  
+    content: "";
+    width: var(--size);
+    aspect-ratio: 1;
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    top: -10px;
+    left: calc(var(--size) / -2);
+    outline: 10px solid rgba(255, 255, 255, 0.274);
+    animation: pulse 4s infinite alternate;
+  }
+  
+  @keyframes pulse {
+    0% {
+      outline-color: #dcffaf75;
+      outline-offset: 0px;
+    }
+    50% {
+      outline-color: #dcffafa3;
+      outline-offset: 6px;
+    }
+    100% {
+      outline-color: #dcffaf46;
+      outline-offset: 0px;
+    }
+  }
+  
+}
